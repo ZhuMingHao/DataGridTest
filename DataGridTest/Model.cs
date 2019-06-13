@@ -1,6 +1,6 @@
 ﻿namespace DataGridTest
 {
-    public class Items
+    public class Item
     {
         public string Name { get; set; }
         public bool Complete { get; set; }

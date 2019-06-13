@@ -26,7 +26,7 @@ namespace DataGridTest
     /// </summary>
     public sealed partial class MainPage : Page, INotifyPropertyChanged
     {
-        public ObservableCollection<Items> MyClasses { get; set; } = new ObservableCollection<Items>();
+        public ObservableCollection<Item> MyClasses { get; set; } = new ObservableCollection<Item>();
 
         private ICollectionView _groupView;
         public ICollectionView GroupView
@@ -45,12 +45,12 @@ namespace DataGridTest
         {
             this.InitializeComponent();
 
-            MyClasses.Add(new Items { Name = "Nico", Complete = false });
-            MyClasses.Add(new Items { Name = "LIU", Complete = true });
-            MyClasses.Add(new Items { Name = "He", Complete = true });
-            MyClasses.Add(new Items { Name = "Wei", Complete = false });
-            MyClasses.Add(new Items { Name = "Dong", Complete = true });
-            MyClasses.Add(new Items { Name = "Ming", Complete = false });
+            MyClasses.Add(new Item { Name = "Nico", Complete = false });
+            MyClasses.Add(new Item { Name = "LIU", Complete = true });
+            MyClasses.Add(new Item { Name = "He", Complete = true });
+            MyClasses.Add(new Item { Name = "Wei", Complete = false });
+            MyClasses.Add(new Item { Name = "Dong", Complete = true });
+            MyClasses.Add(new Item { Name = "Ming", Complete = false });
 
         }
 
