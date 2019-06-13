@@ -1,0 +1,59 @@
+﻿<Page
+    x:Class="DataGridTest.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="using:Microsoft.Toolkit.Uwp.UI.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="using:DataGridTest"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+    mc:Ignorable="d"
+    >
+ 
+    <Grid>
+        <controls:DataGrid
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Stretch"
+            AlternatingRowBackground="Transparent"
+            AlternatingRowForeground="Gray"
+            AreRowDetailsFrozen="False"
+            AreRowGroupHeadersFrozen="True"
+            AutoGenerateColumns="False"
+            CanUserReorderColumns="True"
+            CanUserResizeColumns="True"
+            CanUserSortColumns="False"
+            ColumnHeaderHeight="32"
+            FrozenColumnCount="0"
+            GridLinesVisibility="None"
+            HeadersVisibility="Column"
+            HorizontalScrollBarVisibility="Visible"
+            IsReadOnly="False"
+            ItemsSource="{x:Bind GroupView, Mode=TwoWay}"
+            Loaded="DataGrid_Loaded"
+            MaxColumnWidth="400"
+            RowDetailsVisibilityMode="Collapsed"
+            RowGroupHeaderPropertyNameAlternative="Range"
+            SelectionMode="Extended"
+            VerticalScrollBarVisibility="Visible"
+            >
+            <controls:DataGrid.RowGroupHeaderStyles>
+                <Style TargetType="controls:DataGridRowGroupHeader">
+                    <Setter Property="Background" Value="LightGray" />
+                </Style>
+            </controls:DataGrid.RowGroupHeaderStyles>
+
+            <controls:DataGrid.Columns>
+                <controls:DataGridTextColumn
+                    Binding="{Binding Name}"
+                    Header="Rank"
+                    Tag="Rank"
+                    />
+                <controls:DataGridComboBoxColumn
+                    Binding="{Binding Complete}"
+                    Header="Mountain"
+                    Tag="Mountain"
+                    />
+            </controls:DataGrid.Columns>
+        </controls:DataGrid>
+    </Grid>
+</Page>
