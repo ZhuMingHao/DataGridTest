@@ -53,6 +53,16 @@
                     Header="Mountain"
                     Tag="Mountain"
                     />
+                
+                <controls:DataGridTemplateColumn Header="Check">
+                    <controls:DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <CheckBox Content="{Binding Name}" IsChecked="{Binding Complete}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </controls:DataGridTemplateColumn.CellTemplate>
+                </controls:DataGridTemplateColumn>
             </controls:DataGrid.Columns>
         </controls:DataGrid>
     </Grid>
